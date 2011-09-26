@@ -1,13 +1,17 @@
 '''
 This plugin allows you to wrap your current selection with a pair of open and close HTML/HTML tags.
-The selection is then moved onto the tag names so that you can easily change them if needed. The
-default tag name is "div".
+The selection is then moved onto the tag names so that you can easily change them if needed.
 
 You may want to add this command in your key bindings file ("Key Bindings - User").
 Suggested key binding:
 
     // Insert HTML tags around the selection
     { "keys": ["ctrl+w"], "command": "insert_html_tag" },
+
+The default tag name inserted is "div". You can change this default by adding a "default_html_tag_to_insert"
+key to your User-settings, like so:
+
+    "default_html_tag_to_insert": "p"
 
 @author: Dimitar Dimitrov <wireman@gmail.com>
 
@@ -17,14 +21,16 @@ Suggested key binding:
 import sublime, sublime_plugin
 
 class InsertHtmlTagCommand(sublime_plugin.TextCommand):
-    TAG_NAME = 'div'
+    TAG_NAME     = 'div'
+    SETTING_NAME = 'default_html_tag_to_insert'
 
     def run(self, edit):
         new_selection_positions = []
+        tag_name = self.view.settings().get(self.SETTING_NAME, self.TAG_NAME)
 
         for s in self.view.sel():
-            open_tag  = '<%s>' % (self.TAG_NAME)
-            close_tag = '</%s>' % (self.TAG_NAME)
+            open_tag  = '<%s>' % (tag_name)
+            close_tag = '</%s>' % (tag_name)
 
             open_position  = s.begin()
             close_position = s.end() + len(open_tag)
@@ -42,4 +48,4 @@ class InsertHtmlTagCommand(sublime_plugin.TextCommand):
 
         # create the new selections, if any
         for p in new_selection_positions:
-            self.view.sel().add(sublime.Region(p, p + len(self.TAG_NAME)))
+            self.view.sel().add(sublime.Region(p, p + len(tag_name)))
