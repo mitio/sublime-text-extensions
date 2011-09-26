@@ -5,7 +5,7 @@ for a given function or keyword which is currently under your cursor.
 You may want to add this command in your key bindings file ("Key Bindings - User").
 For example, you could add something like this:
 
-    // ctrl+h help (TextMate-style help)
+    // Show help on the current word (TextMate-style help)
     { "keys": ["ctrl+h"], "command": "show_help" },
 
 You can modify existing or add additional help resource URLs by creating a "help_resources"
@@ -36,6 +36,7 @@ import os.path
 import urllib
 
 class ShowHelpCommand(sublime_plugin.TextCommand):
+    SETTING_NAME   = 'help_resources'
     HELP_RESOURCES = {
         '__default__':      'http://www.google.com/search?q=%s',
         'PHP':              'http://php.net/%s',
@@ -49,7 +50,7 @@ class ShowHelpCommand(sublime_plugin.TextCommand):
             word = self.view.substr(word_region)
 
             syntax_name, _ = os.path.splitext(os.path.basename(self.view.settings().get('syntax')))
-            help_resources = self.view.settings().get('help_resources', {})
+            help_resources = self.view.settings().get(self.SETTING_NAME, {})
 
             if type(help_resources) == dict:
                 help_resource = help_resources.get(syntax_name, self.HELP_RESOURCES.get(syntax_name))
