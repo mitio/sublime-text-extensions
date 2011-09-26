@@ -1,3 +1,19 @@
+'''
+This plugin allows you to wrap your current selection with a pair of open and close HTML/HTML tags.
+The selection is then moved onto the tag names so that you can easily change them if needed. The
+default tag name is "div".
+
+You may want to add this command in your key bindings file ("Key Bindings - User").
+Suggested key binding:
+
+    // Insert HTML tags around the selection
+    { "keys": ["ctrl+w"], "command": "insert_html_tag" },
+
+@author: Dimitar Dimitrov <wireman@gmail.com>
+
+@license: MIT (http://www.opensource.org/licenses/mit-license.php)
+'''
+
 import sublime, sublime_plugin
 
 class InsertHtmlTagCommand(sublime_plugin.TextCommand):
