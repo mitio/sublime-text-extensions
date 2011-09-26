@@ -1,3 +1,35 @@
+'''
+A simple plugin which allows you to quickly open up in your browser a help page
+for a given function or keyword which is currently under your cursor.
+
+You may want to add this command in your key bindings file ("Key Bindings - User").
+For example, you could add something like this:
+
+    // ctrl+h help (TextMate-style help)
+    { "keys": ["ctrl+h"], "command": "show_help" },
+
+You can modify existing or add additional help resource URLs by creating a "help_resources"
+key in your User-settings file and a corresponding dictionary of "syntax name - help resource URL"
+pairs, like so:
+
+    "help_resources":
+    {
+        "Ruby": "http://google.com/search?q=%s",
+        'PHP":  "http://php.net/%s"
+    }
+
+"%s" will be replaced with the word under your cursor when you invoke the command.
+
+The default help resource URL is a Google search. In this case, the syntax name is also added
+to the search query to help in narrowing results down. You can use that syntax name to define
+a more precise help resource URL in your settings. The syntax name for the current view is also
+visible in the bottom right corner of your status bar.
+
+@author: Dimitar Dimitrov <wireman@gmail.com>
+
+@license: MIT (http://www.opensource.org/licenses/mit-license.php)
+'''
+
 import sublime, sublime_plugin
 import webbrowser
 import os.path
