@@ -21,13 +21,25 @@ Snippets reside under the `snippets/` folder. They're just small XML files. You 
 them if you wish. You can find more info about snippets in the
 [unofficial documentation](http://sublimetext.info/docs/en/extensibility/snippets.html).
 
+Settings
+--------
+
+In the `settings/` folder you will find all of my SublimeText 2's configuration files, including
+key bindings, chrome UI themes, global settings, etc. These files reside under my `Packages/User`
+folder. In them you may stumble on references to plugins not (yet) present in this repository.
+They're probably plugins from
+[theblacklion's sublime_plugins project](https://bitbucket.org/theblacklion/sublime_plugins/overview).
+
 Installation
 ------------
 
-* To install a plugin, you just need to place the corresponding Python file into your
+* **To install a plugin**, you just need to place the corresponding Python file into your
   [SublimeText 2's `Packages` folder](http://sublimetext.info/docs/en/basic_concepts.html#the-packages-directory).
   The location of this folder is OS-specific. You can find more details on the subject in the
   [unofficial documentation](http://sublimetext.info/docs/en/extensibility/plugins.html).
 
-* To install a snippet, you need to place the snippet file under any subfolder of `Packages`. If you
+* **To install a snippet**, you need to place the snippet file under any subfolder of `Packages`. If you
   place the snippet deeper in the file hierarchy, it will not be automatically loaded by SublimeText 2.
+
+* **As for the settings**, you can just place the appropriate config file somewhere under your `Packages/User`
+  folder. I use hardlinks between my clone of this Git repo and the file under `Packages/User`.
