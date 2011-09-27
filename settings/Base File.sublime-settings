@@ -1,0 +1,18 @@
+{
+	"color_scheme": "Packages/User/Themes/Mitio.tmTheme",
+	"default_line_ending": "unix",
+	"draw_minimap_border": true,
+	"draw_white_space": "all",
+	"fallback_encoding": "Cyrillic (Windows 1251)",
+	"font_face": "BitstreamVeraSansMono-Roman",
+	"font_size": 12,
+	"highlight_line": true,
+	"highlight_trailing_spaces_color_name": "trailing_spaces",
+	"indent_subsequent_lines": true,
+	"rulers":
+	[
+		100
+	],
+	"scroll_past_end": false,
+	"wrap_width": 0
+}

@@ -1,0 +1,32 @@
+[
+	// Show help on the current word (TextMate-style help)
+	{ "keys": ["ctrl+h"], "command": "show_help" },
+
+	// Insert HTML tags around the current selection
+	{ "keys": ["ctrl+w"], "command": "insert_snippet", "args": { "name": "Packages/User/html-tag.sublime-snippet" } },
+
+	// ERB-style output tag
+	{ "keys": ["ctrl+,"], "command": "insert_snippet", "args": { "name": "Packages/User/erb-output-tag.sublime-snippet" } },
+
+	// ERB-style control tag
+	{ "keys": ["ctrl+shift+,"], "command": "insert_snippet", "args": { "name": "Packages/User/erb-control-tag.sublime-snippet" } },
+
+	// goto line
+	{ "keys": ["super+l"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+
+	// goto declaration
+	{ "keys": ["super+shift+t"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
+
+	// general goto
+	{ "keys": ["super+t"], "command": "show_overlay", "args": {"overlay": "goto"} },
+
+	// select whole lines
+	{ "keys": ["super+shift+l"], "command": "expand_selection", "args": {"to": "line"} },
+
+	// diffs
+	{ "keys": ["ctrl+d"], "command": "diff_views_mark" },
+	{ "keys": ["ctrl+shift+d"], "command": "diff_views_execute" },
+
+	// convert file encoding
+	{ "keys": ["ctrl+super+e"], "command": "convert_encoding" }
+]
