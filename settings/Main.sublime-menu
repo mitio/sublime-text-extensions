@@ -1,0 +1,17 @@
+[
+    {
+        "id": "edit",
+        "children":
+        [
+            { "caption": "-", "id": "custom_edit_commands" },
+            {
+                "caption": "Diff",
+                "children": [
+                    {"caption": "Mark view for diff", "command": "diff_views_mark"},
+                    {"caption": "Diff marked views", "command": "diff_views_execute"}
+                ]
+            },
+            { "command": "convert_encoding", "caption": "Convert encoding..." }
+        ]
+    }
+]
