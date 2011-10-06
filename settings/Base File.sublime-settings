@@ -9,11 +9,11 @@
 	"highlight_line": true,
 	"highlight_trailing_spaces_color_name": "trailing_spaces",
 	"indent_subsequent_lines": true,
-	"show_open_files": false,
 	"rulers":
 	[
 		100
 	],
 	"scroll_past_end": false,
+	"show_open_files": false,
 	"wrap_width": 0
 }

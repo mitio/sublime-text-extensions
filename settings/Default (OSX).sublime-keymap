@@ -6,7 +6,7 @@
 	{ "keys": ["ctrl+w"], "command": "insert_snippet", "args": { "name": "Packages/User/html-tag.sublime-snippet" } },
 
 	// ERB-style output tag
-	{ "keys": ["ctrl+,"], "command": "insert_snippet", "args": { "name": "Packages/User/erb-output-tag.sublime-snippet" } },
+	{ "keys": ["ctrl+shift+."], "command": "insert_snippet", "args": { "name": "Packages/User/erb-output-tag.sublime-snippet" } },
 
 	// ERB-style control tag
 	{ "keys": ["ctrl+shift+,"], "command": "insert_snippet", "args": { "name": "Packages/User/erb-control-tag.sublime-snippet" } },
