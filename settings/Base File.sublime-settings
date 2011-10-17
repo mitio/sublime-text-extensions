@@ -5,7 +5,7 @@
 	"draw_white_space": "all",
 	"fallback_encoding": "Cyrillic (Windows 1251)",
 	"font_face": "BitstreamVeraSansMono-Roman",
-	"font_size": 12,
+	"font_size": 12.0,
 	"highlight_line": true,
 	"highlight_trailing_spaces_color_name": "trailing_spaces",
 	"indent_subsequent_lines": true,
