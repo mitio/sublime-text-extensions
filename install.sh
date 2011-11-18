@@ -2,7 +2,7 @@
 
 unamestr=`uname`
 if [ "$unamestr" = 'Linux' ]; then
-	SUBLIME_SHARED_FOLDER="~/.config/sublime-text-2/Packages"
+	SUBLIME_SHARED_FOLDER="~/.config/sublime-text-2/"
 elif [ "$unamestr" = 'Darwin' ]; then
 	SUBLIME_SHARED_FOLDER="$HOME/Library/Application Support/Sublime Text 2/"
 else
@@ -21,6 +21,6 @@ do
 	echo "  ${package}"
 done
 
-cp -R ${INSTALL_SOURCE} '${SUBLIME_SHARED_FOLDER}'
+cp -r ${INSTALL_SOURCE} "${SUBLIME_SHARED_FOLDER}"
 
 echo "Done."
