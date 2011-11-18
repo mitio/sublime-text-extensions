@@ -1,3 +1,20 @@
+Quick Install
+=============
+
+If you're using Mac OS X (or Linux), you can quickly install all of the extentions here "as-is", using
+the `./install.sh` script. It installs into your Sublime Text 2's shared folder (it's OS-dependent).
+The script tries to detect it and has been tested on Mac OS X and Ubuntu.
+
+1. Quit all running instances of Sublime Text 2
+2. Run `./install.sh`
+
+After that, you may need to adjust the settings in the following files:
+
+* `$SUBLIME_SHARED_FOLDER/Packages/User/Base\ File.sublime-settings` -- you may need to adjust the
+  `font_face` and `font_size` properties (you may not have my fonts installed).
+* `$SUBLIME_SHARED_FOLDER/Packages/User/Global.sublime-settings` -- you may need to comment this line
+  if you're experiencing glitches/rendering problems in the chrome UI of Sublime.
+
 SublimeText 2 Extensions
 ========================
 
