@@ -42,6 +42,7 @@ class ShowHelpCommand(sublime_plugin.TextCommand):
         'PHP':              'http://php.net/%s',
         'Ruby':             'http://apidock.com/ruby/search/quick?query=%s',
         'Ruby on Rails':    'http://apidock.com/rails/search/quick?query=%s',
+        'RSpec':            'http://apidock.com/rspec/search/quick?query=%s',
     }
 
     def run(self, edit):
