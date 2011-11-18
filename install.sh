@@ -2,7 +2,7 @@
 
 unamestr=`uname`
 if [ "$unamestr" = 'Linux' ]; then
-	SUBLIME_SHARED_FOLDER="$USER/.config/sublime-text-2/"
+	SUBLIME_SHARED_FOLDER="$HOME/.config/sublime-text-2/"
 elif [ "$unamestr" = 'Darwin' ]; then
 	SUBLIME_SHARED_FOLDER="$HOME/Library/Application Support/Sublime Text 2/"
 else
