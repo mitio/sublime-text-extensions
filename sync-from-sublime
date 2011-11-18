@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+SUBLIME_SHARED_FOLDER = File.expand_path("~/Library/Application Support/Sublime Text 2/Packages")
+INSTALL_FOLDER        = File.dirname(__FILE__) + '/install/Packages'
+PACKAGE_NAMES         = [
+  'User',
+  'CoffeeScript',
+  'Git',
+  'RSpec',
+  'SCSS',
+  'Sass',
+  'Theme - Soda',
+  'WordHighlight',
+]
+
+PACKAGE_NAMES.each do |package|
+  from, to = "#{SUBLIME_SHARED_FOLDER}/#{package}", "#{INSTALL_FOLDER}/#{package}"
+
+  puts "cp '#{from}' -> '#{to}'"
+
+  system %Q(cp -rf "#{from}" "#{to}")
+  system %Q(rm -rf "#{to}/*.pyc")
+  system %Q(rm -rf "#{to}/.git")
+end
