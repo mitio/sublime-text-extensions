@@ -14,11 +14,11 @@ PACKAGE_NAMES         = [
 ]
 
 PACKAGE_NAMES.each do |package|
-  from, to = "#{SUBLIME_SHARED_FOLDER}/#{package}", "#{INSTALL_FOLDER}/#{package}"
+  from, to = "#{SUBLIME_SHARED_FOLDER}/#{package}", "#{INSTALL_FOLDER}/"
 
-  puts "cp '#{from}' -> '#{to}'"
+  puts "'#{from}' -> '#{to}'"
 
-  system %Q(cp -rf "#{from}" "#{to}")
-  system %Q(rm -rf "#{to}/*.pyc")
-  system %Q(rm -rf "#{to}/.git")
+  system %Q(\\cp -rf "#{from}" "#{to}")
+  system %Q(\\rm -rf "#{to}/#{package}/*.pyc")
+  system %Q(\\rm -rf "#{to}/#{package}/.git")
 end
