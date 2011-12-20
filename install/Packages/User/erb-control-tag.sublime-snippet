@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[<%- ${1:$SELECTION} %>]]></content>
-    <tabTrigger>&lt;%</tabTrigger>
-    <scope>text.html.ruby</scope>
-    <description>ERB control tags &lt;% %&gt;</description>
-</snippet>
